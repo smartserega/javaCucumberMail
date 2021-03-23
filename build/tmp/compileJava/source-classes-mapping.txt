@@ -1,0 +1,22 @@
+runner/BDDRunner.java
+ runner.BDDRunner
+steps/YandexSteps.java
+ steps.YandexSteps
+Pages/YandexPages/YandexPicturesLinkPage.java
+ Pages.YandexPages.YandexPicturesLinkPage
+steps/MainSteps.java
+ steps.MainSteps
+Pages/YandexPages/YandexDownLoadPicturePage.java
+ Pages.YandexPages.YandexDownLoadPicturePage
+Pages/YandexPages/YandexHomePage.java
+ Pages.YandexPages.YandexHomePage
+common/WebDriverFactory.java
+ common.WebDriverFactory
+Pages/Page.java
+ Pages.Page
+Flow/YandexFlow.java
+ Flow.YandexFlow
+common/Application.java
+ common.Application
+Pages/Navigation.java
+ Pages.Navigation
