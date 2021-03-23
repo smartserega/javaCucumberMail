@@ -3,35 +3,27 @@ package steps;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
-import org.testng.annotations.AfterClass;
-
-import java.io.IOException;
 
 public class MainSteps {
 
-    private static final ThreadLocal<WebDriver> DRIVER = new ThreadLocal<>();
-
+    private static WebDriver driver;
 
     @Before
-    public void setUp() {
-        if (DRIVER.get() == null) {
-            WebDriverManager.chromedriver().setup();
-            DRIVER.set(new ChromeDriver());
-        }
+    public void setDriver() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
     }
 
-    public static WebDriver getDriver(){
-        return DRIVER.get();
+    public static WebDriver getDriver() {
+        return driver;
     }
 
     @After
     public void tearDown() {
-        if (DRIVER.get() != null) {
-            DRIVER.remove();
+        if (getDriver() != null) {
+            driver.quit();
         }
     }
 }
