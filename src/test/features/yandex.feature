@@ -5,12 +5,7 @@ Feature: Tests for yandex search
     Given User open https://yandex.ru page
 
   @pictureSearch
-  Scenario Outline: search picture
+  Scenario: search picture
     When User open yandex link with Картинки
-    And User user download picture with <picture>
-    Then User see that <picName> is <state>
-
-    Examples:
-      | picture      | picName  | state   |
-      | avtokran.jpg | автокран | present |
-      | clock.jpeg   | часы     | present |
+    And User user download picture with avtokran.jpg
+    Then User see that автокран is present
