@@ -1,11 +1,10 @@
-package Pages.YandexPages;
+package pages.yandexPages;
 
-import Pages.Page;
-import common.WebDriverFactory;
+import pages.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import steps.MainSteps;
+import steps.Driver;
 
 //yandex home page
 public class YandexHomePage extends Page {
@@ -18,7 +17,7 @@ public class YandexHomePage extends Page {
     }
 
     public void openServicesLink(String link) {
-        WebElement linkElement = MainSteps.getDriver().findElement(By.xpath("//div[contains(@class , services-new__item-title)][text() = '"+link+"']"));
+        WebElement linkElement = Driver.getDriver().findElement(By.xpath("//div[contains(@class , services-new__item-title)][text() = '"+link+"']"));
         linkElement.click();
     }
 }

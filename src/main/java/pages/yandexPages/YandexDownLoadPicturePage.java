@@ -1,6 +1,6 @@
-package Pages.YandexPages;
+package pages.yandexPages;
 
-import Pages.Page;
+import pages.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -13,9 +13,6 @@ public class YandexDownLoadPicturePage extends Page {
 
     @FindBy(name = "upfile")
     public WebElement inputFileElement;
-
-    @FindBy(name = "cbir-submit")
-    public WebElement saveButton;
 
     public void ensurePageOpen() {
         waitWhileElemIsVisible(ensurePageLoadedElement);

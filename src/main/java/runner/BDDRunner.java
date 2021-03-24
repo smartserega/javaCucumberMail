@@ -1,6 +1,5 @@
 package runner;
 
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.PickleEventWrapper;
@@ -14,6 +13,7 @@ import org.testng.annotations.Test;
                 "pretty",
                 "json:target/cucumber.json"},
         features = "src/test/features/",
+        tags = {"all"},
         glue = {"steps"})
 public class BDDRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
@@ -21,7 +21,6 @@ public class BDDRunner {
     @BeforeClass(alwaysRun = true)
     public void setUpClass() throws Exception {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-        //   Application.setEnv(Application.getEnv());
     }
 
     @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "scenarios")
@@ -33,11 +32,4 @@ public class BDDRunner {
     public Object[][] scenarios() {
         return testNGCucumberRunner.provideScenarios();
     }
-//
-//    @AfterClass(alwaysRun = true)
-//    public void tearDownClass() {
-//        if (Driver.getDriver() != null) {
-//            Driver.getDriver().quit();
-//        }
-//    }
 }

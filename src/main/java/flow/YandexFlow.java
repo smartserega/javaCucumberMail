@@ -1,25 +1,24 @@
-package Flow;
+package flow;
 
-import Pages.YandexPages.YandexDownLoadPicturePage;
-import Pages.YandexPages.YandexHomePage;
-import Pages.YandexPages.YandexPicturesLinkPage;
-import common.WebDriverFactory;
+import pages.yandexPages.YandexDownLoadPicturePage;
+import pages.yandexPages.YandexHomePage;
+import pages.yandexPages.YandexPicturesLinkPage;
 import org.openqa.selenium.support.PageFactory;
-import steps.MainSteps;
+import steps.Driver;
 
 import java.io.IOException;
 
 public class YandexFlow {
     private static YandexHomePage yandexHomePage = PageFactory.initElements(
-            MainSteps.getDriver(), YandexHomePage.class
+            Driver.getDriver(), YandexHomePage.class
     );
 
     private static YandexPicturesLinkPage yandexPicturesPage= PageFactory.initElements(
-            MainSteps.getDriver(), YandexPicturesLinkPage.class
+            Driver.getDriver(), YandexPicturesLinkPage.class
     );
 
     private static YandexDownLoadPicturePage downLoadPicturePage= PageFactory.initElements(
-            MainSteps.getDriver(), YandexDownLoadPicturePage.class
+            Driver.getDriver(), YandexDownLoadPicturePage.class
     );
 
     public static void openServicesLink(String link) {

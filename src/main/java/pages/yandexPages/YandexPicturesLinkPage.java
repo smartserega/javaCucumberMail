@@ -1,11 +1,10 @@
-package Pages.YandexPages;
+package pages.yandexPages;
 
-import Pages.Page;
-import common.WebDriverFactory;
+import pages.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import steps.MainSteps;
+import steps.Driver;
 
 //pictures link
 public class YandexPicturesLinkPage extends Page {
@@ -29,7 +28,7 @@ public class YandexPicturesLinkPage extends Page {
     public void verifyPictureIs(String pictureName, String state) {
         waitWhileElemIsVisible(pictureResultsElement);
         if(state.equals("present")){
-            WebElement element = MainSteps.getDriver().findElement(By.xpath("//div[@class = 'CbirItem-Title'][text() = 'Кажется, на изображении']/..//span[contains(text(), '"+pictureName+"')]"));
+            WebElement element = Driver.getDriver().findElement(By.xpath("//div[@class = 'CbirItem-Title'][text() = 'Кажется, на изображении']/..//span[contains(text(), '"+pictureName+"')]"));
             waitWhileElemIsVisible(element);
         } else {
             //negative test

@@ -6,7 +6,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class MainSteps {
+public class Driver {
 
     private static WebDriver driver;
 
@@ -27,25 +27,3 @@ public class MainSteps {
         }
     }
 }
-//
-//
-//    @Before
-//    public void setUpBrowser() {
-//        //     WebDriverFactory webDriverFactory = new WebDriverFactory();
-////        WebDriverFactory.setDriver();
-////        webdriver.set(WebDriverFactory.getDriver());
-//
-//        if (webdriver.get() == null) {
-//            WebDriverFactory.setDriver();;
-//        }
-//    }
-//
-//    @After
-//    public void after() {
-//        if (webdriver.get() == null) {
-//            webdriver.remove();
-//        }
-//    }
-//
-//}
-
