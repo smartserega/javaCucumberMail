@@ -7,5 +7,5 @@ Feature: Tests for yandex search
   @pictureSearch
   Scenario: search picture
     When User open yandex link with Картинки
-    And User user download picture with avtokran.jpg
+    And User download picture with avtokran.jpg
     Then User see that автокран is present

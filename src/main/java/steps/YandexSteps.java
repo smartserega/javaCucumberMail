@@ -22,8 +22,8 @@ public class YandexSteps {
 
     }
 
-    @And("^User user download picture with (.*)")
-    public void userUserDownloadPictureWith(String path) throws IOException {
+    @And("^User download picture with (.*)")
+    public void userDownloadPictureWith(String path) throws IOException {
         Navigation.switchToBrowserLink(1);
         YandexFlow.downloadPicture(path);
 
